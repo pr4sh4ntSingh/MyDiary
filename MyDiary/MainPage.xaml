@@ -1,0 +1,24 @@
+﻿<Window x:Class="MyDiary.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Prashant Singh's Diary" Height="760" Width="1366" Background="#FF0EF7ED" WindowStyle="ThreeDBorderWindow" WindowState="Maximized" >
+   
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="506*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="DateBox" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="57,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="223" FontFamily="Mangal" FontSize="16"/>
+        <TextBox x:Name="TimeBox" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="350,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="163" FontFamily="Mangal" FontSize="16"/>
+        <TextBox x:Name="MoodBox" Grid.Column="1" HorizontalAlignment="Left" Height="34" Margin="571,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="392" FontFamily="Mangal" FontSize="16"/>
+       <RichTextBox x:Name="notesBox" ScrollViewer.HorizontalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True"
+			ScrollViewer.VerticalScrollBarVisibility="Auto"  AcceptsReturn="True" Grid.Column="1" HorizontalAlignment="Left" Height="564" Margin="57,87,0,0"   VerticalAlignment="Top" Width="906" FontFamily="Mangal" FontSize="14" KeyDown="b1"/>
+        <Button Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="350,656,0,0" VerticalAlignment="Top" Width="135" Height="38" Click="Button_Click_1"/>
+        <Button x:Name="CreateButton" Content="Create New" HorizontalAlignment="Left" Margin="193,22,0,0" VerticalAlignment="Top" Width="105" Height="33" Click="CreateButton_Click"/>
+        <Label x:Name="idLabel" Content="id" Grid.Column="1" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" FontFamily="Britannic Bold" FontSize="18"/>
+        <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="32" Margin="7,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="58" FontFamily="Mangal" FontSize="16"/>
+        <Button x:Name="openButton" Content="Open" HorizontalAlignment="Left" Margin="70,23,0,0" VerticalAlignment="Top" Width="80" Height="32" Click="openButton_Click"/>
+        <DataGrid HorizontalAlignment="Left" Name="mydata" AutoGenerateColumns="True" ColumnWidth="Auto" ItemsSource="{Binding}" 
+                  GridLinesVisibility="All" CanUserAddRows="False" CanUserResizeColumns="True"  ColumnHeaderHeight="40" IsReadOnly="True" CanUserReorderColumns="True" FontFamily="Mangal" FontSize="12" Margin="7,87,0,0" VerticalAlignment="Top" Width="339" Height="564"/>
+    </Grid>
+</Window>
